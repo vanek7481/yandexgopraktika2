@@ -1,4 +1,4 @@
-package main
+﻿package main
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// Проверка диапазона порта
+// РџСЂРѕРІРµСЂРєР° РґРёР°РїР°Р·РѕРЅР° РїРѕСЂС‚Р°
 func validatePort(value interface{}) bool {
 	switch v := value.(type) {
 	case int:
@@ -22,9 +22,9 @@ func validatePort(value interface{}) bool {
 	}
 }
 
-// Основная функция проверки YAML
+// РћСЃРЅРѕРІРЅР°СЏ С„СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё YAML
 func validateYAML(filename string) {
-	data, err := os.ReadFile(filename) // ✅ заменили ioutil.ReadFile
+	data, err := os.ReadFile(filename) // вњ… Р·Р°РјРµРЅРёР»Рё ioutil.ReadFile
 	if err != nil {
 		fmt.Printf("%s: unable to read file: %v\n", filename, err)
 		return
@@ -143,3 +143,4 @@ func main() {
 	filename := os.Args[1]
 	validateYAML(filename)
 }
+
